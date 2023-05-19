@@ -6,12 +6,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.Instant;
 
 @Entity
 @NoArgsConstructor
@@ -19,10 +17,10 @@ import java.time.Instant;
 @Data
 
 
-public class Usuario {
+public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idUsuario;
+    private long idFuncionario;
     @NotBlank
     @Email
     private String email;
@@ -34,5 +32,11 @@ public class Usuario {
     private String senha;
     @NotBlank
     private String telefone;
+    @NotBlank
+    private String areaDesejada;
+    @NotNull
+    private long cpf;
+    @NotBlank
+    private String descricao;
 
 }
