@@ -27,9 +27,9 @@ public class Funcionario {
     @NotBlank
     private String nome;
     @NotBlank
-    private String endereco;
-    @NotBlank
-    private String senha;
+    private String cidade;
+    @NotNull
+    private float valor ;
     @NotBlank
     private String telefone;
     @NotBlank
